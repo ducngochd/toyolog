@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '133.18.49.173',
+	'hostname' => '133.18.49.173/phpmyadmin',
 	'username' => 'root',
 	'password' => 'Vdngoc@92',
 	'database' => 'japan_film',
