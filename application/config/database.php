@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '133.18.49.173',
+	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => 'Vdngoc@92',
 	'database' => 'japan_film',
