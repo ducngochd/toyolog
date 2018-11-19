@@ -56,7 +56,7 @@ $route['404_override'] = 'error_404';
 
 /*********** USER DEFINED ROUTES *******************/
 
-$route['loginMe'] = 'index.php/login/loginMe';
+$route['loginMe'] = 'login/loginMe';
 $route['dashboard'] = 'user';
 $route['logout'] = 'user/logout';
 $route['userListing'] = 'user/userListing';
