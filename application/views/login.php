@@ -73,7 +73,7 @@
           </div>
         </form>
 
-        <a href="<?php echo base_url() ?>forgotPassword"><?php echo base_url()?>パスワードをお忘れの方はこちら</a><br>
+        <a href="<?php echo base_url() ?>forgotPassword">パスワードをお忘れの方はこちら</a><br>
         
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
