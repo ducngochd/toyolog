@@ -258,7 +258,7 @@
             var total_file=document.getElementById("uploadFile").files.length;
             for(var i=0;i<total_file;i++)
              {
-                $('#image_preview').append("<img src='"+URL.createObjectURL(event.target.files[i])+"'>");
+                $('#image_preview').append("<img style='width:200px;padding:5px' src='"+URL.createObjectURL(event.target.files[i])+"'>");
              }
 
         });
