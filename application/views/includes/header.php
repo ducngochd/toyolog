@@ -26,6 +26,14 @@
       		color:red;
       		font-weight: normal;
       	}
+           #image_preview{
+      border: 1px solid black;
+      padding: 10px;
+    }
+    #image_preview img{
+      width: 200px;
+      padding: 5px;
+    }
       </style>
       <script src="<?php echo base_url(); ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
       <script type="text/javascript">
