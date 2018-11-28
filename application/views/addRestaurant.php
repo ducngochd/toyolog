@@ -28,8 +28,8 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="file" name="picture" id="profile-img">
-                                            <img src="" id="profile-img-tag" width="200px" />
+                                            <input type="file" name="uploadFile[]" id="uploadFile" multiple/>
+                                            <div id="image_preview" style="border: 1px solid black;padding: 10px;"></div>
                                         </div>
  
                                     </div>
@@ -251,20 +251,16 @@
         $(".select2").select2();
 
         $(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-});
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            reader.onload = function (e) {
-                $('#profile-img-tag').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    $("#profile-img").change(function(){
-        readURL(this);
-    });
-</script>
+            $('.js-example-basic-multiple').select2();
+        });
+        $("#profile-img").change(function(){
+            $('#image_preview').html("");
+            var total_file=document.getElementById("uploadFile").files.length;
+            for(var i=0;i<total_file;i++)
+             {
+                $('#image_preview').append("<img src='"+URL.createObjectURL(event.target.files[i])+"'>");
+             }
+
+        });
+    </script>
     <script src="<?php echo base_url(); ?>assets/js/addUser.js" type="text/javascript"></script>
