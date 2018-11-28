@@ -29,7 +29,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <input type="file" name="uploadFile[]" id="uploadFile" multiple/>
-                                            <div id="image_preview" style="border: 1px solid black;padding: 10px;"></div>
+                                            <div id="image_preview"></div>
                                         </div>
  
                                     </div>
@@ -253,7 +253,7 @@
         $(document).ready(function() {
             $('.js-example-basic-multiple').select2();
         });
-        $("#profile-img").change(function(){
+        $("#uploadFile").change(function(){
             $('#image_preview').html("");
             var total_file=document.getElementById("uploadFile").files.length;
             for(var i=0;i<total_file;i++)
