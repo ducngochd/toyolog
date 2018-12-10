@@ -10,11 +10,11 @@ class Restaurant extends BaseController
         $this->load->model('restaurant_model');
         $config['encrypt_name'] = TRUE;
                 $config['upload_path'] = './upload/';
-                $config['allowed_types'] = 'gif|jpg|png|jpeg|GIF|JPG|PNG|JPEG';
-                $config['max_size']  = '10240000';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg|GIF|JPG|PNG|JPEG|HEIC';
+                $config['max_size']  = '10240000000';
                 $config['quality'] = 50;
-                $config['max_width']  = '1024000';
-                $config['max_height']  = '768000';
+                $config['max_width']  = '10240000';
+                $config['max_height']  = '7680000';
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
         $this->isLoggedIn();  
