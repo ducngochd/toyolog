@@ -49,29 +49,29 @@ class Restaurant extends BaseController
             $this->loadThis();
         }else {
             $this->global['pageTitle'] = 'CodeInsect : Add New User';
-            $data['city'] = $GLOBALS['pref'];
-            $data['price'] = array(
-                '1000'=>'1000円',
-                '2000'=>'2000円',
-                '3000'=>'3000円',
-                '4000'=>'4000円',
-                '5000'=>'5000円',
-                '6000'=>'6000円',
-                '7000'=>'7000円',
-                '8000'=>'8000円',
-                '9000'=>'9000円',
-                '10000'=>'10000円',
-                '12000'=>'12000円',
-                '15000'=>'15000円',
-                '20000'=>'20000円',
-                '25000'=>'25000円',
-                '30000'=>'30000円',
-                '35000'=>'35000円',
-                '40000'=>'40000円',
-                '45000'=>'45000円',
-                '50000'=>'50000円',
+            // $data['city'] = $GLOBALS['pref'];
+            // $data['price'] = array(
+            //     '1000'=>'1000円',
+            //     '2000'=>'2000円',
+            //     '3000'=>'3000円',
+            //     '4000'=>'4000円',
+            //     '5000'=>'5000円',
+            //     '6000'=>'6000円',
+            //     '7000'=>'7000円',
+            //     '8000'=>'8000円',
+            //     '9000'=>'9000円',
+            //     '10000'=>'10000円',
+            //     '12000'=>'12000円',
+            //     '15000'=>'15000円',
+            //     '20000'=>'20000円',
+            //     '25000'=>'25000円',
+            //     '30000'=>'30000円',
+            //     '35000'=>'35000円',
+            //     '40000'=>'40000円',
+            //     '45000'=>'45000円',
+            //     '50000'=>'50000円',
 
-            );
+            // );
             $this->load->model('restaurant_model');
             $this->load->model('categories_model');
             $type = $this->restaurant_model->getSituation();
@@ -81,12 +81,9 @@ class Restaurant extends BaseController
             $data = array(
                 'type' => $type,
                 'categories' => $categories,
-                'subCategories' => $subCategories
+                'subCategories' => $subCategories,
+                'city'          => $GLOBALS['pref'];
              );
-
-            var_dump($data);
-            exit();
-
             $this->loadViews("addRestaurant", $this->global, $data, NULL);        
         }
     }
