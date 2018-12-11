@@ -82,7 +82,7 @@ class Restaurant extends BaseController
                 'type' => $type,
                 'categories' => $categories,
                 'subCategories' => $subCategories,
-                'city'          => $GLOBALS['pref'];
+                'city'          => $GLOBALS['pref']
              );
             $this->loadViews("addRestaurant", $this->global, $data, NULL);        
         }
