@@ -31,8 +31,9 @@ class Restaurant extends BaseController
 
     function addRestaurant() {
 
+        $data['pref_list']     = $this->common->remakeSelectArr($GLOBALS['pref'], isset($postData['pref']) ? $postData['pref'] : null);
 
-        var_dump($GLOBALS['pref']);
+        var_dump($data);
         exit();
 
         $this->load->library('form_validation');
