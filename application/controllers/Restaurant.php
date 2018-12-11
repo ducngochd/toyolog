@@ -84,6 +84,9 @@ class Restaurant extends BaseController
                 'subCategories' => $subCategories
              );
 
+            var_dump($data);
+            exit();
+
             $this->loadViews("addRestaurant", $this->global, $data, NULL);        
         }
     }
