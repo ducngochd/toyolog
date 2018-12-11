@@ -32,6 +32,9 @@ class Restaurant extends BaseController
     function addRestaurant() {
 
 
+        var_dump($GLOBALS['pref']);
+        exit();
+
         $this->load->library('form_validation');
             
         $this->form_validation->set_rules('fname','Full Name','trim|required|max_length[128]');
