@@ -31,11 +31,6 @@ class Restaurant extends BaseController
 
     function addRestaurant() {
 
-        $data['pref_list']     = $this->common->remakeSelectArr($GLOBALS['pref'], isset($postData['pref']) ? $postData['pref'] : null);
-
-        var_dump($data);
-        exit();
-
         $this->load->library('form_validation');
             
         $this->form_validation->set_rules('fname','Full Name','trim|required|max_length[128]');
@@ -54,14 +49,7 @@ class Restaurant extends BaseController
             $this->loadThis();
         }else {
             $this->global['pageTitle'] = 'CodeInsect : Add New User';
-            $data['city'] = array(
-                '1'=>'東京部',
-                '2'=>'大阪府',
-                '3'=>'戸別県',
-                '4'=>'北海道',
-                '5'=>'愛知県',
-                '6'=>'静岡'
-            );
+            $data['city'] = $GLOBALS['pref'];
             $data['price'] = array(
                 '1000'=>'1000円',
                 '2000'=>'2000円',
